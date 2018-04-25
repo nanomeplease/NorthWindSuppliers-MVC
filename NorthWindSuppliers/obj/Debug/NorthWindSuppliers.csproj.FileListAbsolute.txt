@@ -1,0 +1,17 @@
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.exe.config
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.exe
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.pdb
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.csprojResolveAssemblyReference.cache
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.csproj.CoreCompileInputs.cache
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.exe
+c:\users\dana marie\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.pdb
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.exe.config
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.exe
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\NorthWindSuppliers.pdb
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.exe
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.pdb
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\DataLayer.dll
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\bin\Debug\DataLayer.pdb
+C:\Users\Carlos\source\repos\NorthWindSuppliers\NorthWindSuppliers\obj\Debug\NorthWindSuppliers.csproj.CopyComplete

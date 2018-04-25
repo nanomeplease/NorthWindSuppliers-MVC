@@ -1,0 +1,39 @@
+﻿@using SuppliersPL.Models
+@model IEnumerable<SuppliersPL.Models.SupplierPO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center">Supplier Info</h2>
+
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="success">
+                <th>Contact Name</th>
+                <th>Contact Title</th>
+                <th>Postal Code</th>
+                <th>Country</th>
+                <th>Phone Number</th>
+                <th> </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-hover">
+                    <td>@item.ContactName </td>
+                    <td>@item.ContactTitle </td>
+                    <td>@item.PostalCode </td>
+                    <td>@item.Country </td>
+                    <td>@item.PhoneNumber </td>                                          
+                        <td>@Html.ActionLink("Delete", "Delete",  "Supplier" , new { supplierId = item.SupplierId }, null)</td>                        
+                        <td>@Html.ActionLink("Update", "", "Supplier", new { supplierId = item.SupplierId }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
