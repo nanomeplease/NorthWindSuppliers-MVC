@@ -151,7 +151,8 @@
     </Compile>
     <Compile Include="Mapping\ProductsMapper.cs" />
     <Compile Include="Mapping\SupplierMapper.cs" />
-    <Compile Include="Models\LoginPO.cs" />
+    <Compile Include="Mapping\UserMapper.cs" />
+    <Compile Include="Models\UserPO.cs" />
     <Compile Include="Models\ProductsPO.cs" />
     <Compile Include="Models\SupplierPO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,10 +196,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Supplier\Index.cshtml" />
     <Content Include="Views\Supplier\Update.cshtml" />
+    <Content Include="Views\Supplier\Create.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
     <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>

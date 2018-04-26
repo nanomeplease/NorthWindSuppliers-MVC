@@ -1,0 +1,55 @@
+﻿@using SuppliersPL.Models
+@model SuppliersPL.Models.SupplierPO
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Supplier", FormMethod.Post))
+{
+    <div class="form-inline">
+        <table align="center">
+            <thead>
+                <tr class="success">
+                    <th>Contact Name</th>
+                    <th>Contact Title</th>
+                    <th>Postal Code</th>
+                    <th>Country</th>
+                    <th>Phone Number</th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-hover">
+                    <div class="form-group">
+                        <td>
+                            @Html.TextBoxFor(Model => Model.ContactName)
+                            @Html.ValidationMessageFor(Model => Model.ContactName)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.ContactTitle)
+                            @Html.ValidationMessageFor(Model => Model.ContactTitle)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.PostalCode)
+                            @Html.ValidationMessageFor(Model => Model.PostalCode)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Country)
+                            @Html.ValidationMessageFor(Model => Model.Country)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.PhoneNumber)
+                            @Html.ValidationMessageFor(Model => Model.PhoneNumber)
+                        </td>
+
+
+                    </div>
+
+                    <td><input type="submit" value="Create"</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

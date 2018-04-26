@@ -19,26 +19,56 @@
         private SupplierDAO dataAccess;
 
 
-        // GET: Suppliers
+        //Create New Supplier
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(SupplierPO form)
+        {
+            ActionResult oResponse = RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    SupplierDO to = SupplierMapper.MapPoToDO(form);
+                    dataAccess.CreateNewSuppliers(to);
+                }
+                catch (Exception ex)
+                {
+
+
+                }
+            }
+            else
+            {
+                oResponse = View();
+            }
+            return oResponse;
+        }
+
+        // View Suppliers
         public ActionResult Index()
         {
+            List<SupplierPO> mappedItems = new List<SupplierPO>();
             try
             {
                 //Display all supppliers to the user and provide actions to authenticated users.                
                 List<SupplierDO> dataObjects = dataAccess.ViewAllSuppliers();
-                List<SupplierPO> mappedItems = SupplierMapper.MapDoToPO(dataObjects);
+                 mappedItems = SupplierMapper.MapDoToPO(dataObjects);
 
-                return View(mappedItems);
+
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
-                throw e;
             }
+            return View(mappedItems);
         }
 
 
-
+        //Update Suppliers
         [HttpGet]
         public ActionResult Update(int supplierId)
         {
@@ -62,8 +92,15 @@
             ActionResult oResponse = RedirectToAction("Index");
             if (ModelState.IsValid)
             {
-                SupplierDO to = SupplierMapper.MapPoToDO(form);
-                dataAccess.UpdateSuppliers(to);
+                try
+                {
+                    SupplierDO to = SupplierMapper.MapPoToDO(form);
+                    dataAccess.UpdateSuppliers(to);
+                }
+                catch (Exception ex)
+                {
+                   
+                }
             }
             else
             {
@@ -72,7 +109,7 @@
             return oResponse;
         }
 
-
+        //Delete Supplier by ID
         [HttpGet]
         public ActionResult Delete(int supplierId)
         {

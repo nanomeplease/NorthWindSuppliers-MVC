@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="Models\ProductsDO.cs" />
     <Compile Include="Models\SupplierDO.cs" />
+    <Compile Include="Models\UserDO.cs" />
     <Compile Include="ProductsDAO.cs" />
     <Compile Include="SupplierDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
