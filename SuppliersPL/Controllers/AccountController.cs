@@ -1,5 +1,8 @@
 ﻿namespace SuppliersPL.Controllers
 {
+    using DataLayer;
+    using DataLayer.Models;
+    using SuppliersPL.Mapping;
     using SuppliersPL.Models;
     using System;
     using System.Collections.Generic;
@@ -9,6 +12,14 @@
 
     public class AccountController : Controller
     {
+        public AccountController()
+        {
+            dataAccess = new UserDAO();
+        }
+
+        //Dependencies
+        private UserDAO dataAccess;
+
         // GET: Account
         public ActionResult Index()
         {
@@ -18,12 +29,15 @@
         [HttpGet]
         public ActionResult Login()
         {
+
             return View();
         }
 
         [HttpPost]
+
         public ActionResult Login(FormCollection form)
         {
+
             return View();
         }
 
@@ -42,7 +56,17 @@
         [HttpPost]
         public ActionResult Register(UserPO user)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                UserDO to = UserMapper.MapPoToDO(user);
+                dataAccess.CreateNewUser(to);
+                
+            }
+            else
+            {
+                //Some message here.
+            }
+            return RedirectToAction("Index");
         }
     }
 }

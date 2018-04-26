@@ -1,0 +1,55 @@
+﻿@using SuppliersPL.Models
+@model SuppliersPL.Models.UserPO
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2 align="center">Create</h2>
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <table align="center">
+            <thead>
+                <tr class="success">
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <div class="form-group">
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Username)
+                            @Html.ValidationMessageFor(Model => Model.Username)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Password)
+                            @Html.ValidationMessageFor(Model => Model.Password)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.FirstName)
+                            @Html.ValidationMessageFor(Model => Model.FirstName)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.LastName)
+                            @Html.ValidationMessageFor(Model => Model.LastName)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Email)
+                            @Html.ValidationMessageFor(Model => Model.Email)
+                        </td>
+
+
+                    </div>
+
+                    <td><input type="submit" value="Register" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
