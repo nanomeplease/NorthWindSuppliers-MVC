@@ -1,13 +1,13 @@
-﻿using DataLayer;
-using DataLayer.Models;
-using SuppliersPL.Mapping;
-using SuppliersPL.Models;
-using System;
-using System.Collections.Generic;
-using System.Web.Mvc;
-
-namespace SuppliersPL.Controllers
+﻿namespace SuppliersPL.Controllers
 {
+    using DataLayer;
+    using DataLayer.Models;
+    using SuppliersPL.Mapping;
+    using SuppliersPL.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Web.Mvc;
+
     public class SupplierController : Controller
     {
         public SupplierController()
@@ -23,7 +23,7 @@ namespace SuppliersPL.Controllers
         public ActionResult Index()
         {
             try
-            {              
+            {
                 //Display all supppliers to the user and provide actions to authenticated users.                
                 List<SupplierDO> dataObjects = dataAccess.ViewAllSuppliers();
                 List<SupplierPO> mappedItems = SupplierMapper.MapDoToPO(dataObjects);
@@ -46,9 +46,7 @@ namespace SuppliersPL.Controllers
             try
             {
                 SupplierDO data = dataAccess.ViewSupplierById(supplierId);
-                //Attempt to go to the database and pull a dataobject for this supplier
-                display= SupplierMapper.MapDoToPO(data);                
-                //Map that dataObject to a displayObject and send it to the user.
+                display = SupplierMapper.MapDoToPO(data);
             }
             catch (Exception ex)
             {
@@ -61,12 +59,17 @@ namespace SuppliersPL.Controllers
         [HttpPost]
         public ActionResult Update(SupplierPO form)
         {
-            //Check model state for errors.
-            //Attempt to post object to database
-            //Redirect the user back to the index view
-            //No
-            //Give the view back.
-            return View();
+            ActionResult oResponse = RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                SupplierDO to = SupplierMapper.MapPoToDO(form);
+                dataAccess.UpdateSuppliers(to);
+            }
+            else
+            {
+                oResponse = View();
+            }
+            return oResponse;
         }
 
 

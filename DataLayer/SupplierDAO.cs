@@ -49,7 +49,7 @@ namespace DataLayer
             catch (Exception ex)
             {
                 //Prints error to console.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
         }
@@ -92,7 +92,7 @@ namespace DataLayer
             catch (Exception ex)
             {
                 //Prints error to console and logs.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
 
@@ -134,7 +134,7 @@ namespace DataLayer
             catch (Exception ex)
             {
                 //Prints error to console and logs.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
 
@@ -178,7 +178,7 @@ namespace DataLayer
             catch (SqlException ex)
             {
                 //Prints error to console and logs.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
         }
@@ -211,7 +211,7 @@ namespace DataLayer
             catch (Exception ex)
             {
                 //Prints error to console and logs.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
         }
@@ -245,7 +245,7 @@ namespace DataLayer
             catch (Exception ex)
             {
                 //Prints error to console and logs.
-                ErrorHandler(ex);
+                //ErrorHandler(ex);
                 throw ex;
             }
         }

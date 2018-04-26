@@ -5,6 +5,55 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
-<p>@Model.ContactName</p>
+<h2 align="center">Update Contact</h2>
+@using (Html.BeginForm("Update", "Supplier", FormMethod.Post))
+{
+    @Html.HiddenFor(model => Model.SupplierId)
+    <div class="form-inline">
+    <table align="center">
+        <thead>
+            <tr class="success">
+                <th>Contact Name</th>
+                <th>Contact Title</th>
+                <th>Postal Code</th>
+                <th>Country</th>
+                <th>Phone Number</th>
+                <th> </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-hover">
+                <div class="form-group">
+                    <td>
+                        @Html.TextBoxFor(Model => Model.ContactName)
+                        @Html.ValidationMessageFor(Model => Model.ContactName)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.ContactTitle)
+                        @Html.ValidationMessageFor(Model => Model.ContactTitle)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.PostalCode)
+                        @Html.ValidationMessageFor(Model => Model.PostalCode)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.Country)
+                        @Html.ValidationMessageFor(Model => Model.Country)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.PhoneNumber)
+                        @Html.ValidationMessageFor(Model => Model.PhoneNumber)
+                    </td>
 
+
+                </div>
+
+                <td><input type="submit" value="Update"</td>
+
+                @*@Html.ActionLink("Update", "Update", "Supplier", new { form = Model }, null)*@
+            </tr>
+        </tbody>
+    </table>
+    </div>
+}

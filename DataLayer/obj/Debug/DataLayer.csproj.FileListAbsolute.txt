@@ -16,3 +16,9 @@ C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\DataLayer
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\DataLayer\obj\Debug\DataLayer.pdb
