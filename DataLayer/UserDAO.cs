@@ -90,6 +90,7 @@
                 user.FirstName = dataRow["FirstName"].ToString();
                 user.LastName = dataRow["LastName"].ToString();
                 user.Email = dataRow["Email"].ToString();
+                user.UserRole = (int)dataRow["UserRole"];
 
                 //Returning the object with a row updated from SQL.
                 return user;

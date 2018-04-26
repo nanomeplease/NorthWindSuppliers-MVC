@@ -8,6 +8,7 @@
         public string FirstName;
         public string LastName;
         public string Email;
+        public int UserRole;
 
     }
 }

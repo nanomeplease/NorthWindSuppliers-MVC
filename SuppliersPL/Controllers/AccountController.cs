@@ -1,5 +1,6 @@
 ﻿namespace SuppliersPL.Controllers
 {
+    using SuppliersPL.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -30,6 +31,18 @@
         public ActionResult Logout()
         {
             return RedirectToAction("Login", "Account");
+        }
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(UserPO user)
+        {
+            return View();
         }
     }
 }
