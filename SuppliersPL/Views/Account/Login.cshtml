@@ -1,7 +1,39 @@
 ﻿
+@using SuppliersPL.Models
+@model SuppliersPL.Models.UserPO
 @{
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
+<h2 align="center">Login</h2>
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <table align="center">
+            <thead>
+                <tr class="success">
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <div class="form-group">
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Username)
+                            @Html.ValidationMessageFor(Model => Model.Username)
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(Model => Model.Password)
+                            @Html.ValidationMessageFor(Model => Model.Password)
+                        </td>
+                    </div>
 
+                    <td><input type="submit" value="Login" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

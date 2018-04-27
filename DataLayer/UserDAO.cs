@@ -44,7 +44,7 @@
                 throw ex;
             }
         }
-        
+
         public List<UserDO> ViewAllUsers()
         {
             List<UserDO> user = new List<UserDO>();
@@ -72,6 +72,38 @@
                 return user;
             }
 
+        }
+
+        //Not working
+        public UserDO ViewUserFromDb(string username)
+        {
+            UserDO user = new UserDO();
+            using (SqlConnection northWndConn = new SqlConnection(connectionString))
+            {
+                //Creating a new SqlCommand to use a stored procedure.
+                SqlCommand enterCommand = new SqlCommand("GET_USER_BY_USERNAME", northWndConn);
+                enterCommand.CommandType = CommandType.StoredProcedure;
+                enterCommand.Parameters.AddWithValue("@Username", username);
+                northWndConn.Open();
+
+                //Using SqlDataAdapter to get SQL table.
+                DataTable userInfo = new DataTable();
+                using (SqlDataAdapter userAdapter = new SqlDataAdapter(enterCommand))
+                {
+                    userAdapter.Fill(userInfo);
+                    userAdapter.Dispose();
+                }
+                //Putting datarow into a List of the supplier object.
+                foreach (DataRow row in userInfo.Rows)
+                {
+                    user.UserId = (int)row["UserId"];
+                    user.Password = row["Password"].ToString();
+                    user.UserRole = (int)row["UserRole"];
+
+                }
+
+            }
+            return user;
         }
 
         public UserDO MapAllUsers(DataRow dataRow)

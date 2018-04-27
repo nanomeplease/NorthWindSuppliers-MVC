@@ -20,12 +20,14 @@
         //Dependencies
         private UserDAO dataAccess;
 
-        // GET: Account
+        //Index
         public ActionResult Index()
         {
             return View();
         }
 
+        #region Login
+        //Login
         [HttpGet]
         public ActionResult Login()
         {
@@ -35,11 +37,25 @@
 
         [HttpPost]
 
-        public ActionResult Login(FormCollection form)
+        public ActionResult Login(UserPO user)
         {
-
-            return View();
+            UserDO fromTable = dataAccess.ViewUserFromDb(user.Username);
+            ActionResult oResponse = View();
+            //If username is valid
+            if (ModelState.IsValid && fromTable.UserId != 0 && fromTable.Password == user.Password)
+            {
+                //give session id and role
+                Session.Add("UserId", fromTable.UserId);
+                Session.Add("RoleId", fromTable.UserRole);
+            }
+            else
+            {
+                oResponse = View();
+                //Incorect username or password
+            }
+            return oResponse;
         }
+        #endregion
 
         [HttpGet]
         public ActionResult Logout()
@@ -47,6 +63,8 @@
             return RedirectToAction("Login", "Account");
         }
 
+        #region Register
+        //Register new user
         [HttpGet]
         public ActionResult Register()
         {
@@ -60,7 +78,7 @@
             {
                 UserDO to = UserMapper.MapPoToDO(user);
                 dataAccess.CreateNewUser(to);
-                
+
             }
             else
             {
@@ -68,5 +86,6 @@
             }
             return RedirectToAction("Index");
         }
+        #endregion
     }
 }
