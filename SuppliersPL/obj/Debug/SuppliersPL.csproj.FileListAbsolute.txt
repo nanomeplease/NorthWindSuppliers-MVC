@@ -184,6 +184,12 @@ C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\Suppliers
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\SuppliersPL\obj\Debug\SuppliersPL.csproj.CopyComplete
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\SuppliersPL\obj\Debug\SuppliersPL.dll
 C:\Users\Carlos\Source\Repos\NorthWindSuppliers-MVC\NorthWindSuppliers\SuppliersPL\obj\Debug\SuppliersPL.pdb
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.IO.Compression.dll
+C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\VBCSCompiler.exe
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\ApplicationInsights.config
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\SuppliersPL.dll.config
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\SuppliersPL.dll
@@ -195,13 +201,9 @@ C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\ros
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\csi.exe.config
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\csi.rsp
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -211,7 +213,6 @@ C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\ros
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.Diagnostics.Process.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.IO.Compression.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -234,7 +235,6 @@ C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\ros
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\vbc.exe
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\vbc.exe.config
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\vbc.rsp
-C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\VBCSCompiler.exe
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\Antlr3.Runtime.dll
 C:\Users\Carlos\Documents\Code\GitHub\NorthWindSuppliers-MVC\SuppliersPL\bin\DataLayer.dll

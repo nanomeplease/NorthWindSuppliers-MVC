@@ -29,9 +29,12 @@
                     <td>@item.ContactTitle </td>
                     <td>@item.PostalCode </td>
                     <td>@item.Country </td>
-                    <td>@item.PhoneNumber </td>                                          
-                        <td>@Html.ActionLink("Delete", "Delete",  "Supplier" , new { supplierId = item.SupplierId }, null)</td>                        
+                    <td>@item.PhoneNumber </td>
+                    @if (Session["RoleId"] != null && (int)Session["RoleId"] <= 2)
+                    {
+                        <td>@Html.ActionLink("Delete", "Delete", "Supplier", new { supplierId = item.SupplierId }, null)</td>
                         <td>@Html.ActionLink("Update", "Update", "Supplier", new { supplierId = item.SupplierId }, null)</td>
+                    }
                 </tr>
             }
         </tbody>

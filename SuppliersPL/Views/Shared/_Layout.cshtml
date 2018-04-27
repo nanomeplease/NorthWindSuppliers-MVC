@@ -23,12 +23,30 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Suppliers", "Index", "Supplier")</li>
-                    <li>@Html.ActionLink("Create", "Create", "Supplier")</li>
+
+                    @if (Session["RoleId"] != null && (int)Session["RoleId"] <= 2)
+                    {
+                        <li>@Html.ActionLink("Suppliers", "Index", "Supplier")</li>
+                        <li> @Html.ActionLink("Create", "Create", "Supplier") </li>
+                    }
+                    @if (Session["RoleId"] != null && (int)Session["RoleId"] == 3)
+                    {
+                        <li>@Html.ActionLink("Suppliers", "Index", "Supplier")</li>
+                    }
+
+
                 </ul>
-                <ul class="nav navbar-right">
-                    <li>@Html.ActionLink("Register", "Register", "Account")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["UserId"] == null)
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink(Session["Username"].ToString(),"","")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    }
                 </ul>
             </div>
         </div>

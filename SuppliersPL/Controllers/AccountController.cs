@@ -4,14 +4,13 @@
     using DataLayer.Models;
     using SuppliersPL.Mapping;
     using SuppliersPL.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
+    using SuppliersPL.Custom;
     using System.Web.Mvc;
+    using System;
 
     public class AccountController : Controller
     {
+
         public AccountController()
         {
             dataAccess = new UserDAO();
@@ -21,6 +20,7 @@
         private UserDAO dataAccess;
 
         //Index
+
         public ActionResult Index()
         {
             return View();
@@ -40,16 +40,24 @@
         public ActionResult Login(UserPO user)
         {
             UserDO fromTable = dataAccess.ViewUserFromDb(user.Username);
-            ActionResult oResponse = View();
+            ActionResult oResponse = RedirectToAction("Index", "Home");
             //If username is valid
             if (ModelState.IsValid && fromTable.UserId != 0 && fromTable.Password == user.Password)
             {
-                //give session id and role
-                Session.Add("UserId", fromTable.UserId);
-                Session.Add("RoleId", fromTable.UserRole);
+                try
+                {
+                    //give session id and role
+                    Session["UserId"] = fromTable.UserId;
+                    Session["Username"] = fromTable.Username;
+                    Session["RoleId"] = fromTable.UserRole;
+                }
+                catch (Exception ex)
+                {
+                }
             }
             else
             {
+                //If to check if it was modelstate.
                 oResponse = View();
                 //Incorect username or password
             }
@@ -57,10 +65,10 @@
         }
         #endregion
 
-        [HttpGet]
         public ActionResult Logout()
         {
-            return RedirectToAction("Login", "Account");
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Index", "Home");
         }
 
         #region Register
@@ -76,15 +84,22 @@
         {
             if (ModelState.IsValid)
             {
-                UserDO to = UserMapper.MapPoToDO(user);
-                dataAccess.CreateNewUser(to);
+                try
+                {
+                    UserDO to = UserMapper.MapPoToDO(user);
+                    dataAccess.CreateNewUser(to);
+                }
+                catch (Exception ex) 
+                {
+                    
+                }
 
             }
             else
             {
                 //Some message here.
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index" , "Home" );
         }
         #endregion
     }

@@ -1,15 +1,15 @@
-﻿using DataLayer;
-using DataLayer.Models;
-using ProductsPL.Mapping;
-using SuppliersPL.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SuppliersPL.Controllers
+﻿namespace SuppliersPL.Controllers
 {
+    using DataLayer;
+    using DataLayer.Models;
+    using ProductsPL.Mapping;
+    using SuppliersPL.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
+
     public class ProductsController : Controller
     {
         //Dependencies

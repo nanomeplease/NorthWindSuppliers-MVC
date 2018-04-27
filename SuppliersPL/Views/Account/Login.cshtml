@@ -5,35 +5,24 @@
     ViewBag.Title = "Login";
 }
 
-<h2 align="center">Login</h2>
+
 @using (Html.BeginForm("Login", "Account", FormMethod.Post))
 {
-    <div class="form-horizontal">
-        <table align="center">
-            <thead>
-                <tr class="success">
-                    <th>User Name</th>
-                    <th>Password</th>
-                    <th> </th>
-                    <th> </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <div class="form-group">
-                        <td>
-                            @Html.TextBoxFor(Model => Model.Username)
-                            @Html.ValidationMessageFor(Model => Model.Username)
-                        </td>
-                        <td>
-                            @Html.TextBoxFor(Model => Model.Password)
-                            @Html.ValidationMessageFor(Model => Model.Password)
-                        </td>
-                    </div>
+    <table align="center">
 
-                    <td><input type="submit" value="Login" /></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <h2>Login</h2>
+        <p>Please log in using your username and password:</p>
+        <div class="form-group">
+            @Html.TextBoxFor(Model => Model.Username, new { @class = "form-control", placeholder = "Username" })
+            @Html.ValidationMessageFor(Model => Model.Username)
+        </div>
+        <div class="form-group">
+            @Html.PasswordFor(Model => Model.Password, new { @class = "form-control", placeholder = "Password" })
+            @Html.ValidationMessageFor(Model => Model.Password)
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+
+    </table>
 }

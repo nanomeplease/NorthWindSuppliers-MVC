@@ -47,29 +47,37 @@
 
         public List<UserDO> ViewAllUsers()
         {
-            List<UserDO> user = new List<UserDO>();
-            using (SqlConnection northWndConn = new SqlConnection(connectionString))
+            try
             {
-                //Creating a new SqlCommand to use a stored procedure.
-                SqlCommand enterCommand = new SqlCommand("READ_USERS", northWndConn);
-                enterCommand.CommandType = CommandType.StoredProcedure;
-                northWndConn.Open();
-
-                //Using SqlDataAdapter to get SQL table.
-                DataTable userInfo = new DataTable();
-                using (SqlDataAdapter userAdapter = new SqlDataAdapter(enterCommand))
+                List<UserDO> user = new List<UserDO>();
+                using (SqlConnection northWndConn = new SqlConnection(connectionString))
                 {
-                    userAdapter.Fill(userInfo);
-                    userAdapter.Dispose();
-                }
+                    //Creating a new SqlCommand to use a stored procedure.
+                    SqlCommand enterCommand = new SqlCommand("READ_USERS", northWndConn);
+                    enterCommand.CommandType = CommandType.StoredProcedure;
+                    northWndConn.Open();
 
-                //Putting datarow into a List of the users object.
-                foreach (DataRow row in userInfo.Rows)
-                {
-                    UserDO mappedRow = MapAllUsers(row);
-                    user.Add(mappedRow);
+                    //Using SqlDataAdapter to get SQL table.
+                    DataTable userInfo = new DataTable();
+                    using (SqlDataAdapter userAdapter = new SqlDataAdapter(enterCommand))
+                    {
+                        userAdapter.Fill(userInfo);
+                        userAdapter.Dispose();
+                    }
+
+                    //Putting datarow into a List of the users object.
+                    foreach (DataRow row in userInfo.Rows)
+                    {
+                        UserDO mappedRow = MapAllUsers(row);
+                        user.Add(mappedRow);
+                    }
+                    return user;
                 }
-                return user;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
 
         }
@@ -97,6 +105,7 @@
                 foreach (DataRow row in userInfo.Rows)
                 {
                     user.UserId = (int)row["UserId"];
+                    user.Username = row["Username"].ToString();
                     user.Password = row["Password"].ToString();
                     user.UserRole = (int)row["UserRole"];
 

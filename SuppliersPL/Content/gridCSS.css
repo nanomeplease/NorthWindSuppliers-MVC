@@ -1,0 +1,35 @@
+﻿.body {
+    background-color: rgb(66,156,156);
+    font-family: Rod;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'colorBar colorBar' 'imageBox displayTitle' 'imageBox navBar' 'dividerBar dividerBar' 'returnedAction returned Action';
+    grid-template-columns: 250px auto;
+    grid-template-rows: 30px auto 30px 200px;
+}
+
+    .grid-container > div {
+        background-color: rgb(255,255,0);
+        text-align: right;
+    }
+
+
+.item1 {
+    grid-area: colorBar;
+    background-color: black;
+}
+
+
+.item2 {
+    grid-area: imageBox;
+    background-color: white;
+}
+
+.item3{
+    grid-area: displayTitle;
+    background-color: rgb(66,156,156);
+    font-variant-caps: all-petite-caps;
+
+}
