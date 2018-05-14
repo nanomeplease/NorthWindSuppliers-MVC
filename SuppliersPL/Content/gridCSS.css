@@ -20,7 +20,7 @@
     grid-area: colorBar;
     background-color: black;
 }
-
+`
 
 .item2 {
     grid-area: imageBox;
